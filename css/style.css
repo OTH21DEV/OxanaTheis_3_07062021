@@ -1,0 +1,32 @@
+body {
+  font-family: "Roboto", sans-serif;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F1F0EF;
+}
+
+input {
+  border: none;
+  background-color: #F1F0EF;
+  vertical-align: bottom;
+  height: 30px;
+  padding-top: 10px;
+}
+input::placeholder {
+  color: black;
+  font-weight: bold;
+  opacity: 0.9;
+  padding-left: 15px;
+  vertical-align: baseline;
+}
+
+/*# sourceMappingURL=style.css.map */

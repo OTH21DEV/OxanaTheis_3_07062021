@@ -1,0 +1,33 @@
+
+@use "../1-abstracts" as *;
+
+p{
+   
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: $dark-grey;
+}
+
+input{
+ 
+   
+    border: none;
+    background-color: $dark-grey;
+    vertical-align: bottom;
+    height: 30px;
+    padding-top: 10px;
+    
+
+&::placeholder{
+    color: black;
+    font-weight: bold;
+    opacity: 0.9;
+    padding-left: 15px;
+    vertical-align: baseline;
+
+  
+  
+}
+}
