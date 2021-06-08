@@ -1,0 +1,23 @@
+@use "../1-abstracts" as *;
+
+.btn{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    padding-top: 30px;
+    @include light-bg;
+    
+
+
+&__gradient{
+    color: white;
+    width: 190px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+   
+   @include gradient;
+}
+}

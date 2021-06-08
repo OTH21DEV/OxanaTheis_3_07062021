@@ -17,10 +17,10 @@
     </head>
     
     <body>
-        <header>
+        <header class="header">
 
-            <img src="maquettes_ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood" />
-           
+            <img class="header__logo" src="maquettes_ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood" />
+              
         </header>
 
         <main>
@@ -29,7 +29,7 @@
 
             <form method="POST" action="traitement.php" >
             <p>
-                <i class="fas fa-map-marker-alt" ></i>   
+                <i class="fas fa-map-marker-alt fa-xs" ></i>   
                 <input type="search" class="search" placeholder="Paris, Belleville"/>
             </p>
 
@@ -37,7 +37,7 @@
 
 
             <div class="heading">
-                <h2 class="heading__main">Réservez le menu qui vous convient</h2>
+                <h2 class="heading__main">Réservez le menu qui <br/>vous convient</h2>
                 <h3 class="heading__byline">Decouvrez des restaurents d'exception,
                     <br/>séléctionnés par nos soins.</h3>
 
@@ -45,59 +45,61 @@
             </div>
 
 
-            <div class="button-rest">
-                <button type="button">Explorer nos restaurants</button>
+            <div class="btn">
+                <button type="button" class="btn__gradient">Explorer nos restaurants</button>
             </div>
 
 
-            <section class="flex">
+            <section class="flex-function">
 
                 <h3>Fonctionnement</h3>
 
-                <div class="button-function">
+                <div class="btn-function">
 
-                    <div class="button-function__number">1</div>
+                   <!--<div class="btn-function__number">1</div>--> 
 
-                    <button type="button" class="button-function__button">
+                    <button type="button" class="btn-function__btn">
 
-                        <div class="button-fonction__icon">
+                        <div class="btn-fonction__icon">
                     
                         <i class="fas fa-mobile-alt"></i>
                          Choisissez un restaurant
 
-                        </div>    
+                        <!--</div>    -->
               
                     </button>
 
                 </div>
 
 
-                <div class="button-function">
+                <div class="btn-function">
 
-                    <div class="button-function__number">2</div>
+                  <!--  <div class="btn-function__number">2</div> -->
 
-                        <button type="button" class="button-function__button">
+                        <button type="button" class="btn-function__btn">
 
-                            <div class="button-fonction__icon">
+                            <div class="btn-fonction__icon">
                     
                             <i class="fas fa-list-ul"></i>
                             Composez votre menu
-                             </div>
+
+                            <!-- </div> -->
 
                         </button>
                 </div>
 
-                <div class="button-function--color">
-
-                    <div class="button-function__number">3</div>
-
-                    <button type="button" class="button-function__button">
-
-                        <div class="button-fonction__icon">
+                <div class="btn-function">
+                
+                 <!-- <div class="btn-function__number">3</div> -->
                     
+               
+ 
+                    <button type="button" class="btn-function__btn">
                         <i class="fas fa-store"></i>
+                        
                         Dégustez au restaurant
-                        </div>
+
+                      <!-- </div> -->
 
                     </button>
                 </div>

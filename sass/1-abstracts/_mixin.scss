@@ -1,0 +1,35 @@
+@use "../1-abstracts/variables" as *;
+
+//mixin for btn gradient
+
+$list: $color-secondary, $color-primary;
+
+@mixin gradient {
+    background: linear-gradient($list);
+}
+
+//mixin with function for background color
+
+@mixin light-bg{
+background-color: scale-color($color: $dark-bg,  $lightness: 50%,);
+}
+
+//mixin with function for background color
+
+@mixin lighter-bg{
+    background-color: scale-color($color: $dark-bg,  $lightness: 70%,);
+    }
+
+//mixin with function for header shadow
+
+$size:2px;
+@mixin header-shadow {
+    box-shadow: $size $size $size*2 scale-color($color: $dark-bg,  $blackness: 30%,);
+}
+
+//mixin with function for btn-function shadow
+
+$size:4px;
+@mixin btn-function-shadow {
+    box-shadow: $size $size $size*2 scale-color($color: $dark-bg,  $lightness: 5%,);
+}

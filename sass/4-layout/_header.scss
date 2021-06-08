@@ -1,4 +1,14 @@
-header{
+@use "../1-abstracts" as *;
+
+.header{
+    margin-bottom: -13px;
     text-align: center;
-    padding-top: 20px ;
+    height: 60px;
+    @include header-shadow;
+
+    &__logo{
+        height: 30px;
+        padding-top: 20px;
+  
+    }
 }

@@ -1,6 +1,9 @@
 
 @use "1-abstracts/variables";
-
+@use "1-abstracts/mixin";
 @use"2-base/fontstyle";
-
+@use "4-layout/header";
 @use "4-layout/form";
+@use "3-components/buttons";
+@use "5-pages/home";
+

@@ -1,0 +1,54 @@
+@use "../1-abstracts" as *;
+
+.heading {
+   @include light-bg;
+}
+
+.heading__main {
+    margin-top: 0px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+   
+}
+.heading__byline {
+    text-align: center;
+    opacity: 0.6;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0;
+    }
+
+
+.flex-function {
+    padding: 0 20px;
+
+    
+    & h3 { 
+    font-size: 1.3em;
+    padding-top: 30px;
+
+    }
+}
+
+.btn-function{
+    display: flex;
+    justify-content: center;
+
+&__btn{
+
+    
+    width: 90%;
+    height: 70px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    
+    @include lighter-bg;
+    @include btn-function-shadow;
+    margin-bottom: 20px;
+  
+}
+}
