@@ -57,10 +57,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
+    &::after{
+           
+        content: "1";
+        position: absolute;
+        background-color: $color-primary;
+        color: white;
+        border-radius: 20px;
+        width: 28px;
+        height: 28px;
+        left: -0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    
+      @for $i from 1 through 3{
+         &:nth-of-type(#{$i}) ::after{
+              content:"#{$i}";
+          }
+      }
 }
 }
 
+}
 
 
 .selection-btn__icon{
@@ -83,25 +105,9 @@
     & p{
          text-align: left;
          font-size: 1.2em;
-         position: relative;
+ 
          
 
-         &::after{
-           
-            content: "1";
-            position: absolute;
-            background-color: $color-primary;
-            color: white;
-            border-radius: 20px;
-            width: 28px;
-            height: 28px;
-          top: -5px;
-            left: -8.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         
-          
- }
 }
 }

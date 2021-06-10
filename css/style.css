@@ -106,6 +106,29 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.selection-btn__btn::after {
+  content: "1";
+  position: absolute;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 20px;
+  width: 28px;
+  height: 28px;
+  left: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selection-btn__btn::after:nth-of-type(1) ::after {
+  content: "1";
+}
+.selection-btn__btn::after:nth-of-type(2) ::after {
+  content: "2";
+}
+.selection-btn__btn::after:nth-of-type(3) ::after {
+  content: "3";
 }
 
 .selection-btn__icon {
@@ -124,21 +147,6 @@ input::placeholder {
 .selection-btn__text p {
   text-align: left;
   font-size: 1.2em;
-  position: relative;
-}
-.selection-btn__text p::after {
-  content: "1";
-  position: absolute;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 20px;
-  width: 28px;
-  height: 28px;
-  top: -5px;
-  left: -8.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
