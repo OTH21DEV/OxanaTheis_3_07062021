@@ -22,14 +22,19 @@ background-color: scale-color($color: $dark-bg,  $lightness: 50%,);
 
 //mixin with function for header shadow
 
-$size:2px;
+$size:4px;
 @mixin header-shadow {
-    box-shadow: $size $size $size*2 scale-color($color: $dark-bg,  $blackness: 30%,);
+    box-shadow: $size $size $size*8 scale-color($color: $dark-bg,  $blackness: 30%,);
 }
 
-//mixin with function for btn-function shadow
+//mixin with function for selection-btn shadow
 
 $size:4px;
-@mixin btn-function-shadow {
+@mixin selection-btn-shadow {
     box-shadow: $size $size $size*2 scale-color($color: $dark-bg,  $lightness: 5%,);
+}
+//mixin with function for selection-btn hover gradient 
+
+@mixin selection-btn-gradient {
+    background-color: scale-color($color: $color-primary,  $lightness: 90%,);
 }

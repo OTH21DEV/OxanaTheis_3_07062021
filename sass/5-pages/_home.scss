@@ -21,7 +21,7 @@
     }
 
 
-.flex-function {
+.selection {
     padding: 0 20px;
 
     
@@ -32,14 +32,19 @@
     }
 }
 
-.btn-function{
-    display: flex;
-    justify-content: center;
+.selection-btn{
+
+        
+   
+    :hover{
+        @include selection-btn-gradient;
+       
+    }
 
 &__btn{
 
     
-    width: 90%;
+    width: 100%;
     height: 70px;
     border-radius: 25px;
     border: none;
@@ -47,8 +52,56 @@
     cursor: pointer;
     
     @include lighter-bg;
-    @include btn-function-shadow;
+    @include selection-btn-shadow;
     margin-bottom: 20px;
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+}
+
+
+
+.selection-btn__icon{
+ 
+    width: 25%;
+    color: scale-color($color: $dark-bg,  $blackness: 90%,);
+    font-weight: bold;
+    font-size: 1.5em;
+
+    &--purple{
+        color:$color-primary;
+    }
+    }
+
+.selection-btn__text{
+ 
+    width: 80%;
+
+
+    & p{
+         text-align: left;
+         font-size: 1.2em;
+         position: relative;
+         
+
+         &::after{
+           
+            content: "1";
+            position: absolute;
+            background-color: $color-primary;
+            color: white;
+            border-radius: 20px;
+            width: 28px;
+            height: 28px;
+          top: -5px;
+            left: -8.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+          
+ }
 }
 }

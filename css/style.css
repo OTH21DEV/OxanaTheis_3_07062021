@@ -7,17 +7,16 @@ body {
 }
 
 .header {
-  margin-bottom: -13px;
   text-align: center;
   height: 60px;
-  box-shadow: 4px 4px 8px #bbbbbb;
+  box-shadow: 4px 4px 32px #bbbbbb;
 }
 .header__logo {
   height: 30px;
   padding-top: 20px;
 }
 
-p {
+.selection-btn__textt {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,20 +82,19 @@ input::placeholder {
   margin-bottom: 0;
 }
 
-.flex-function {
+.selection {
   padding: 0 20px;
 }
-.flex-function h3 {
+.selection h3 {
   font-size: 1.3em;
   padding-top: 30px;
 }
 
-.btn-function {
-  display: flex;
-  justify-content: center;
+.selection-btn :hover {
+  background-color: #f4eefc;
 }
-.btn-function__btn {
-  width: 90%;
+.selection-btn__btn {
+  width: 100%;
   height: 70px;
   border-radius: 25px;
   border: none;
@@ -105,6 +103,42 @@ input::placeholder {
   background-color: #fbfbfa;
   box-shadow: 4px 4px 8px #f2f1f0;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selection-btn__icon {
+  width: 25%;
+  color: #828282;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.selection-btn__icon--purple {
+  color: #9356DC;
+}
+
+.selection-btn__text {
+  width: 80%;
+}
+.selection-btn__text p {
+  text-align: left;
+  font-size: 1.2em;
+  position: relative;
+}
+.selection-btn__text p::after {
+  content: "1";
+  position: absolute;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 20px;
+  width: 28px;
+  height: 28px;
+  top: -5px;
+  left: -8.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
