@@ -39,7 +39,8 @@ $size:4px;
     background-color: scale-color($color: $color-primary,  $lightness: 90%,);
 }
 
-$number:1,2,3;
-@mixin number{
-    content: "nth($number,1)";
+//mixin with function for background color
+
+@mixin grey-bg{
+background-color: scale-color($color: black,  $lightness: 20%,);
 }

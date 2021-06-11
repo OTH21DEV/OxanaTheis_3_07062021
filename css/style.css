@@ -44,6 +44,44 @@ input::placeholder {
   font-size: 1.1em;
 }
 
+footer {
+  color: white;
+  padding: 0 20px 30px 20px;
+  background-color: #333333;
+  height: auto;
+}
+
+.footer__logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.footer__logo img {
+  height: 20px;
+  filter: invert(100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer__nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer__nav__link {
+  display: flex;
+  color: white;
+  align-items: baseline;
+}
+
+.fa-hands-helping, .fa-utensils {
+  width: 25px;
+}
+
 .btn {
   display: flex;
   justify-content: center;
