@@ -83,13 +83,30 @@ input::placeholder {
 }
 
 .selection {
-  padding: 0 20px;
+  padding: 0 20px 40px 20px;
 }
 .selection h3 {
   font-size: 1.3em;
   padding-top: 30px;
 }
 
+.selection-btn {
+  position: relative;
+}
+.selection-btn__number {
+  content: "";
+  position: absolute;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 20px;
+  width: 28px;
+  height: 28px;
+  left: -0.5rem;
+  top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .selection-btn :hover {
   background-color: #f4eefc;
 }
@@ -100,35 +117,12 @@ input::placeholder {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  background-color: #fbfbfa;
+  background-color: #f8f8f7;
   box-shadow: 4px 4px 8px #f2f1f0;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-.selection-btn__btn::after {
-  content: "1";
-  position: absolute;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 20px;
-  width: 28px;
-  height: 28px;
-  left: -0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.selection-btn__btn::after:nth-of-type(1) ::after {
-  content: "1";
-}
-.selection-btn__btn::after:nth-of-type(2) ::after {
-  content: "2";
-}
-.selection-btn__btn::after:nth-of-type(3) ::after {
-  content: "3";
 }
 
 .selection-btn__icon {
@@ -137,7 +131,7 @@ input::placeholder {
   font-weight: bold;
   font-size: 1.5em;
 }
-.selection-btn__icon--purple {
+.selection-btn__icon :hover {
   color: #9356DC;
 }
 
@@ -147,6 +141,75 @@ input::placeholder {
 .selection-btn__text p {
   text-align: left;
   font-size: 1.2em;
+}
+
+.rest {
+  padding: 40px 20px 30px 20px;
+  background-color: #f8f8f7;
+  height: auto;
+}
+
+.rest-card {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 230px;
+  background-color: white;
+  box-shadow: 4px 4px 8px #f2f1f0;
+  position: relative;
+}
+
+.rest-card__image {
+  width: 100%;
+}
+.rest-card__image img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 150px;
+  object-fit: cover;
+}
+
+.rest-card__heading-heart__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50px;
+  padding: 5px 10px;
+  line-height: 2em;
+  background-color: white;
+}
+.rest-card__heading-heart__heading h2 {
+  font-size: 1em;
+  margin: 0;
+}
+.rest-card__heading-heart__heading h3 {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1em;
+}
+
+.rest-card__heading-heart {
+  display: flex;
+  justify-content: space-between;
+}
+.rest-card__heading-heart .rest-card__heading-heart__heart {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  opacity: 0.6;
+}
+
+.rest-card__label {
+  position: absolute;
+  background-color: #99E2D0;
+  font-weight: bold;
+  height: 30px;
+  width: 80px;
+  color: #299077;
+  bottom: 11rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

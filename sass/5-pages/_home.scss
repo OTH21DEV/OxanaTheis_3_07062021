@@ -22,7 +22,7 @@
 
 
 .selection {
-    padding: 0 20px;
+    padding: 0 20px 40px 20px;
 
     
     & h3 { 
@@ -33,8 +33,23 @@
 }
 
 .selection-btn{
+    position: relative;
 
-        
+        &__number{
+            content: "";
+            position: absolute;
+            background-color: $color-primary;
+            color: white;
+            border-radius: 20px;
+            width: 28px;
+            height: 28px;
+            left: -0.5rem;
+            top:1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
    
     :hover{
         @include selection-btn-gradient;
@@ -57,29 +72,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+     
 
-    &::after{
-           
-        content: "1";
-        position: absolute;
-        background-color: $color-primary;
-        color: white;
-        border-radius: 20px;
-        width: 28px;
-        height: 28px;
-        left: -0.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    
-      @for $i from 1 through 3{
-         &:nth-of-type(#{$i}) ::after{
-              content:"#{$i}";
-          }
-      }
-}
 }
 
 }
@@ -92,10 +86,13 @@
     font-weight: bold;
     font-size: 1.5em;
 
-    &--purple{
+    :hover{
+
         color:$color-primary;
     }
-    }
+}
+
+
 
 .selection-btn__text{
  
@@ -105,9 +102,88 @@
     & p{
          text-align: left;
          font-size: 1.2em;
- 
-         
-
-        
+  
 }
+}
+.rest{
+    padding: 40px 20px 30px 20px;
+    
+    @include light-bg;
+    height: auto;
+    
+}
+
+.rest-card{
+
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 230px;
+    background-color: white;
+
+    @include  selection-btn-shadow;
+
+    position: relative;
+
+
+    
+}
+
+.rest-card__image{
+    width: 100%;
+       
+
+    & img{
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        height: 150px;
+        object-fit: cover;
+        }
+}
+
+.rest-card__heading-heart__heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+    padding:5px 10px;
+    line-height: 2em;
+    background-color: white;
+
+    
+    & h2{
+        font-size: 1em;
+        margin: 0;
+      
+    }
+    & h3{
+        font-size: 0.9em;
+        font-weight: 400;
+        margin: 0;
+        line-height: 1em;
+    }
+}
+
+.rest-card__heading-heart{
+    display: flex;
+    justify-content: space-between;
+  
+.rest-card__heading-heart__heart{
+    padding:10px 20px;
+    font-size: 1.5em;
+    opacity:0.6;
+}}
+
+.rest-card__label{
+    position: absolute;
+    background-color: $color-tertiary;
+
+    font-weight: bold;
+    height: 30px;
+    width: 80px;
+    color: darken($color: $color-tertiary, $amount: 38%);
+    bottom:11rem;
+    right:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
