@@ -1,42 +1,47 @@
 @use "../1-abstracts/variables" as *;
 @use "../1-abstracts/mixin" as *;
-footer{
+
+
+.footer{
  
-    color: white;
-    padding: 0 20px 30px 20px;
-   @include grey-bg;
-   height: auto;
+color: white;
+padding: 0 20px 30px 20px;
+@include grey-bg;
+height: auto;
 }
+
 .footer__logo{
 
 height: 60px;
 display: flex;
 align-items: center;
 
-& img{
+    & img{
 
     height: 20px;
     filter: invert(100%);
   
+    }
 }
-}
+
 a{
-    text-decoration: none;
-   
+
+text-decoration: none;  
     
 }
+
 .footer__nav ul{
-    list-style-type: none;
-    padding-left: 0;
-    line-height: 1.5;
-    margin: 0;
+list-style-type: none;
+padding-left: 0;
+line-height: 1.5;
+margin: 0;
    
 }
 
 .footer__nav__link{
-    display: flex;
-    color: white;
-    align-items:baseline;
+display: flex;
+color: white;
+align-items:baseline;
 
 }
 .fa-hands-helping, .fa-utensils{

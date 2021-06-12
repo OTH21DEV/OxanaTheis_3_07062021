@@ -42,7 +42,7 @@ input::placeholder {
   font-size: 1.1em;
 }
 
-footer {
+.footer {
   color: white;
   padding: 0 20px 30px 20px;
   background-color: #333333;
