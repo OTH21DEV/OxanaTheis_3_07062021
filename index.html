@@ -19,36 +19,35 @@
     <body>
         <header class="header">
 
-            <img class="header__logo" src="maquettes_ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood" />
+            <img src="maquettes_ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo_ohmyfood" />
               
         </header>
 
         <main>
 
 
+            <form method="POST" action="traitement.php" class="location">
 
-            <form method="POST" action="traitement.php" >
-            <p class="selection-btn__textt">
-                <i class="fas fa-map-marker-alt fa-xs" ></i>   
+            <p class="location__icon-text">
+                <i class="fas fa-map-marker-alt" ></i>   
                 <input type="search" class="search" placeholder="Paris, Belleville"/>
             </p>
 
             </form>
 
+           
 
-            <div class="heading">
-                <h2 class="heading__main">Réservez le menu qui <br/>vous convient</h2>
-                <h3 class="heading__byline">Decouvrez des restaurents d'exception,
+            <section class="intro">
+
+                <h2 class="intro__main-heading">Réservez le menu qui <br/>vous convient</h2>
+                <h3 class="intro__byline-heading">Decouvrez des restaurents d'exception,
                     <br/>séléctionnés par nos soins.</h3>
 
-               
-            </div>
-
-
-            <div class="btn">
-                <button type="button" class="btn__gradient">Explorer nos restaurants</button>
-            </div>
-
+                <div class="btn">
+                    <button type="button" class="btn__gradient">Explorer nos restaurants</button>
+                </div>
+            </section>
+          
 
             <section class="selection">
 
@@ -132,9 +131,9 @@
 
                 </div>
 
-                <div class="rest-card__heading-heart">
+                <div class="rest-card__wrapper-titles-icon">
                     
-                    <div class="rest-card__heading-heart__heading">
+                    <div class="rest-card__titles">
                 
                         <h2>La palette du goût</h2>
                         <h3>Ménilmontant</h3>
@@ -142,7 +141,7 @@
          
                     </div>  
 
-                        <div class="rest-card__heading-heart__heart">
+                        <div class="rest-card__heart-icon">
                         <i class="far fa-heart"></i>
 
                         </div>
@@ -163,14 +162,15 @@
     
                     </div>
                     
-                    <div class="rest-card__heading-heart">
-                        <div class="rest-card__heading-heart__heading">
+                    <div class="rest-card__wrapper-titles-icon">
+
+                        <div class="rest-card__titles">
                     
                             <h2>La note enchantée</h2>
                             <h3>Charonne</h3>
                         </div>
 
-                        <div class="rest-card__heading-heart__heart">
+                        <div class="rest-card__heart-icon">
                         <i class="far fa-heart"></i>
                         </div>
     
@@ -188,16 +188,16 @@
         
                         </div>
         
-                        <div class="rest-card__heading-heart">
+                        <div class="rest-card__wrapper-titles-icon">
 
-                            <div class="rest-card__heading-heart__heading">
+                            <div class="rest-card__titles">
 
                         <h2>A la française</h2>
                         <h3>Cité Rouge</h3>
                             </div>
 
 
-                            <div class="rest-card__heading-heart__heart">
+                            <div class="rest-card__heart-icon">
                             
                             <i class="far fa-heart"></i>
                             </div>
@@ -213,16 +213,16 @@
             
                             </div>
             
-                            <div class="rest-card__heading-heart">
+                            <div class="rest-card__wrapper-titles-icon">
 
-                                <div class="rest-card__heading-heart__heading">
+                                <div class="rest-card__titles">
 
                             <h2>Le délice des sens</h2>
                             <h3>Folie-Méricourt</h3>
                                 </div>
 
 
-                                <div class="rest-card__heading-heart__heart">
+                                <div class="rest-card__heart-icon">
                                     <i class="far fa-heart"></i>
                                 </div>
     
@@ -255,7 +255,7 @@
                    
                     <li>Mentions légales</li>
                     </a>
-                    <a class="footer__nav__link" href="#">
+                    <a class="footer__nav__link" href="mailto:ohmyfood@ohmyfood.com">
                     <li>Contact</li>
                     </a>
                 </ul>

@@ -22,9 +22,9 @@ background-color: scale-color($color: $dark-bg,  $lightness: 50%,);
 
 //mixin with function for header shadow
 
-$size:4px;
+
 @mixin header-shadow {
-    box-shadow: $size $size $size*8 scale-color($color: $dark-bg,  $blackness: 30%,);
+    box-shadow: inset 0 4px 5px 0 scale-color($color: $dark-bg,  $blackness: 30%,);
 }
 
 //mixin with function for selection-btn shadow

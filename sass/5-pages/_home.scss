@@ -1,10 +1,13 @@
 @use "../1-abstracts" as *;
 
-.heading {
+.intro {
    @include light-bg;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
 }
 
-.heading__main {
+.intro__main-heading {
     margin-top: 0px;
     padding-top: 30px;
     text-align: center;
@@ -12,7 +15,7 @@
     font-weight: bold;
    
 }
-.heading__byline {
+.intro__byline-heading {
     text-align: center;
     opacity: 0.6;
     font-size: 1em;
@@ -22,12 +25,12 @@
 
 
 .selection {
-    padding: 0 20px 40px 20px;
+    padding: 30px 20px 40px 20px;
 
     
     & h3 { 
     font-size: 1.3em;
-    padding-top: 30px;
+
 
     }
 }
@@ -140,7 +143,7 @@
         }
 }
 
-.rest-card__heading-heart__heading{
+.rest-card__titles{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -163,15 +166,16 @@
     }
 }
 
-.rest-card__heading-heart{
+.rest-card__wrapper-titles-icon{
     display: flex;
     justify-content: space-between;
+}
   
-.rest-card__heading-heart__heart{
+.rest-card__heart-icon{
     padding:10px 20px;
     font-size: 1.5em;
     opacity:0.6;
-}}
+}
 
 .rest-card__label{
     position: absolute;

@@ -1,21 +1,24 @@
 
-@use "../1-abstracts" as *;
+@use "../1-abstracts/variables" as *;
+@use "../1-abstracts/mixin" as *;
 
-
-.selection-btn__textt{
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark-bg;
+    height: 50px;
+    @include header-shadow;
+}
+.location__icon-text{
   
     display: flex;
     justify-content: center;
     align-items:center;
-    background-color: $dark-bg;
-    margin-bottom: 0px;
-    padding-left: 10px;
-    height: 45px;
+  
     
 }
-.fa-map-marker-alt{
-    font-size: 0.65em;
-}
+
 
 input{
  
