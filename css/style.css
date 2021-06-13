@@ -12,6 +12,17 @@ body {
   align-items: center;
   height: 60px;
 }
+.header.header--arrow {
+  position: relative;
+}
+
+.fa-arrow-left {
+  font-size: 1.3em;
+  width: 100px;
+  position: absolute;
+  left: 1rem;
+  bottom: 1.3rem;
+}
 
 .location {
   display: flex;
@@ -61,6 +72,7 @@ input::placeholder {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .footer__nav ul {
@@ -80,13 +92,16 @@ a {
   width: 25px;
 }
 
-.btn {
+.btn-wrapper {
   display: flex;
   justify-content: center;
   padding: 30px 0 50px 0;
-  background-color: #f8f8f7;
 }
-.btn__gradient {
+.btn-wrapper.btn-wrapper--order {
+  padding-top: 40px;
+}
+
+.btn-gradient {
   color: white;
   width: 190px;
   height: 45px;
@@ -95,6 +110,64 @@ a {
   font-weight: bold;
   cursor: pointer;
   background: linear-gradient(#FF79DA, #9356DC);
+}
+.btn-gradient.btn-gradient--order {
+  width: 160px;
+}
+
+.btn-choice {
+  width: 100%;
+  height: 70px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f8f8f7;
+  box-shadow: 4px 4px 8px #f2f1f0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-choice.btn-choice--menu {
+  justify-content: flex-start;
+  background-color: white;
+  position: relative;
+}
+
+.heart-icon {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  opacity: 0.6;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5px 10px;
+  line-height: 2em;
+  background-color: white;
+}
+.titles h2 {
+  font-size: 1em;
+  margin: 0;
+}
+.titles h3 {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1em;
+}
+.titles.titles--menu {
+  line-height: 2.2em;
+}
+.titles.titles--menu h2 {
+  font-size: 1.3em;
+}
+.titles.titles--menu h3 {
+  font-size: 1.1em;
 }
 
 .intro {
@@ -147,20 +220,6 @@ a {
 .selection-btn :hover {
   background-color: #f4eefc;
 }
-.selection-btn__btn {
-  width: 100%;
-  height: 70px;
-  border-radius: 25px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #f8f8f7;
-  box-shadow: 4px 4px 8px #f2f1f0;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .selection-btn__icon {
   width: 25%;
@@ -205,35 +264,9 @@ a {
   object-fit: cover;
 }
 
-.rest-card__titles {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 50px;
-  padding: 5px 10px;
-  line-height: 2em;
-  background-color: white;
-}
-.rest-card__titles h2 {
-  font-size: 1em;
-  margin: 0;
-}
-.rest-card__titles h3 {
-  font-size: 0.9em;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1em;
-}
-
 .rest-card__wrapper-titles-icon {
   display: flex;
   justify-content: space-between;
-}
-
-.rest-card__heart-icon {
-  padding: 10px 20px;
-  font-size: 1.5em;
-  opacity: 0.6;
 }
 
 .rest-card__label {
@@ -248,6 +281,42 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu {
+  padding: 0 20px;
+  background-color: #f8f8f7;
+}
+
+.menu-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-heading h1 {
+  font-family: Shrikhand;
+  font-size: 1.6em;
+}
+
+.entree > h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.titles-price-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.price {
+  position: absolute;
+  right: 1rem;
+  bottom: -0.4rem;
+}
+
+.price > p {
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */

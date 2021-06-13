@@ -1,0 +1,35 @@
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:5px 10px;
+    line-height: 2em;
+    background-color: white;
+
+    
+    & h2{
+        font-size: 1em;
+        margin: 0;
+      
+    }
+    & h3{
+        font-size: 0.9em;
+        font-weight: 400;
+        margin: 0;
+        line-height: 1em;
+    }
+
+        &.titles--menu{
+          //  position: relative;
+            line-height: 2.2em;
+
+            & h2{
+                font-size: 1.3em;
+            }
+            & h3{
+                font-size: 1.1em;
+            }
+        }
+}
