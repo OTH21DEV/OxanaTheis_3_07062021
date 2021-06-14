@@ -1,4 +1,87 @@
-@use "../1-abstracts" as *;
+@use "../1-abstracts/variables" as *;
+@use "../1-abstracts/mixin" as *;
+
+
+
+.loader__item-oh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  background-color: $color-primary;
+  position: relative;
+  animation: testanimation 1300ms 0.1s linear infinite;
+  z-index: 1;
+  top: 15rem;
+  left: 3rem;
+  font-size: 1.2em;
+  
+}
+
+.loader__item-my {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  background-color: $color-secondary;
+  position: absolute;
+  animation: testanimation 1300ms 0.2s linear infinite;
+
+  top: 15rem;
+  left: 10rem;
+  font-size: 1.2em;
+}
+
+.loader__item-food {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  background-color: $color-tertiary;
+  position: absolute;
+  animation: testanimation 1300ms 0.3s linear infinite;
+
+  top: 15rem;
+  left: 17rem;
+  font-size: 1.2em;
+}
+@keyframes testanimation {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+
+  25% {
+    transform: scale(0.4);
+    filter: blur(3px);
+  }
+  50% {
+    transform: scale(0.8);
+    filter: blur(3px);
+  }
+  75% {
+    transform: scalex(1);
+    filter: blur(3px);
+  }
+
+  85% {
+    transform: scalex(1.1);
+    filter: blur(0px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
 
 .intro {
   @include light-bg;

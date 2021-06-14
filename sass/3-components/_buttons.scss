@@ -46,7 +46,7 @@
   font-weight: bold;
   cursor: pointer;
 
-  @include lighter-bg;
+  @include light-bg;
   @include selection-btn-shadow;
   margin-bottom: 20px;
   display: flex;

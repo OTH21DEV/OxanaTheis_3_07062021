@@ -28,9 +28,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F1F0EF;
+  background-color: #e1e0e0;
   height: 50px;
-  box-shadow: inset 0 4px 5px 0 #bbbbbb;
+  box-shadow: inset 0 4px 5px 0 #b2b2b2;
 }
 
 .location__icon-text {
@@ -41,7 +41,7 @@ body {
 
 input {
   border: none;
-  background-color: #F1F0EF;
+  background-color: #e1e0e0;
   height: 30px;
 }
 input::placeholder {
@@ -49,7 +49,7 @@ input::placeholder {
   font-weight: bold;
   opacity: 0.8;
   padding-left: 10px;
-  border-top: 1px solid #F1F0EF;
+  border-top: 1px solid #e1e0e0;
   font-size: 1.1em;
 }
 
@@ -122,8 +122,8 @@ a {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  background-color: #f8f8f7;
-  box-shadow: 4px 4px 8px #f2f1f0;
+  background-color: #e7e6e6;
+  box-shadow: 0px 5px 8px 3px #e1e0e0;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
@@ -186,8 +186,83 @@ a {
   border-radius: inherit;
 }
 
+.loader__item-oh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  background-color: #9356DC;
+  position: relative;
+  animation: testanimation 1300ms 0.1s linear infinite;
+  z-index: 1;
+  top: 15rem;
+  left: 3rem;
+  font-size: 1.2em;
+}
+
+.loader__item-my {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  background-color: #FF79DA;
+  position: absolute;
+  animation: testanimation 1300ms 0.2s linear infinite;
+  top: 15rem;
+  left: 10rem;
+  font-size: 1.2em;
+}
+
+.loader__item-food {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  background-color: #99E2D0;
+  position: absolute;
+  animation: testanimation 1300ms 0.3s linear infinite;
+  top: 15rem;
+  left: 17rem;
+  font-size: 1.2em;
+}
+
+@keyframes testanimation {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  25% {
+    transform: scale(0.4);
+    filter: blur(3px);
+  }
+  50% {
+    transform: scale(0.8);
+    filter: blur(3px);
+  }
+  75% {
+    transform: scalex(1);
+    filter: blur(3px);
+  }
+  85% {
+    transform: scalex(1.1);
+    filter: blur(0px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
 .intro {
-  background-color: #f8f8f7;
+  background-color: #e7e6e6;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -239,7 +314,7 @@ a {
 
 .selection-btn__icon {
   width: 25%;
-  color: #828282;
+  color: #7d7d7d;
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -257,7 +332,7 @@ a {
 
 .rest {
   padding: 40px 20px 30px 20px;
-  background-color: #f8f8f7;
+  background-color: #e7e6e6;
   height: auto;
 }
 
@@ -266,7 +341,7 @@ a {
   margin-bottom: 20px;
   height: 230px;
   background-color: white;
-  box-shadow: 4px 4px 8px #f2f1f0;
+  box-shadow: 0px 5px 8px 3px #e1e0e0;
   position: relative;
 }
 
@@ -290,13 +365,13 @@ a {
 }
 
 main {
-  background-color: #f8f8f7;
+  background-color: #f0f0f0;
 }
 
 .menu {
   padding: 0 20px;
   border-radius: 60px 60px 0 0;
-  background-color: #f8f8f7;
+  background-color: #f0f0f0;
   position: relative;
   top: -50px;
   height: auto;
