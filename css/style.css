@@ -157,6 +157,7 @@ a {
 .titles h3 {
   font-size: 0.9em;
   font-weight: 400;
+  opacity: 0.7;
   margin: 0;
   line-height: 1em;
 }
@@ -164,10 +165,10 @@ a {
   line-height: 2.2em;
 }
 .titles.titles--menu h2 {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 .titles.titles--menu h3 {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .rest-card-image {
@@ -313,9 +314,16 @@ main {
 }
 
 .menu-content > h2 {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 400;
   opacity: 0.7;
+}
+.menu-content > h2::after {
+  content: "";
+  border-bottom: 3px solid #99E2D0;
+  display: block;
+  width: 40px;
+  padding-top: 5px;
 }
 
 .titles-price-wrapper {
@@ -325,12 +333,10 @@ main {
 
 .price {
   position: absolute;
-  right: 1rem;
-  bottom: -0.4rem;
-}
-
-.price > p {
-  font-size: 1.2em;
+  right: 1.5rem;
+  bottom: -0.1rem;
+  opacity: 0.8;
+  font-size: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

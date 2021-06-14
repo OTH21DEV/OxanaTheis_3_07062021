@@ -1,13 +1,14 @@
 @use "../1-abstracts/mixin" as *;
+@use "../1-abstracts/variables" as *;
 
-main{
-    @include lighter-bg; 
+main {
+  @include lighter-bg;
 }
 
 .menu {
   padding: 0 20px;
   border-radius: 60px 60px 0 0;
-  @include lighter-bg; 
+  @include lighter-bg;
   position: relative;
   top: -50px;
   height: auto;
@@ -24,9 +25,18 @@ main{
   }
 }
 .menu-content > h2 {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 400;
   opacity: 0.7;
+
+    &::after{
+        content: "";
+        border-bottom: 3px solid $color-tertiary;
+        display: block;
+        width: 40px;
+        padding-top: 5px;
+    }
+
 }
 
 .titles-price-wrapper {
@@ -35,10 +45,9 @@ main{
 }
 .price {
   position: absolute;
-  right: 1rem;
-  bottom: -0.4rem;
+  right: 1.5rem;
+  bottom: -0.1rem;
+  opacity: 0.8;
+  font-size: 1em;
 }
 
-.price > p {
-  font-size: 1.2em;
-}
