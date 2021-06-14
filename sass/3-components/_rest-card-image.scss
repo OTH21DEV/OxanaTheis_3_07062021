@@ -1,0 +1,25 @@
+
+
+//img carte restaurant page d'accueil
+
+.rest-card-image{
+    width: 100%;
+       
+
+    & img{
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        height: 150px;
+        object-fit: cover;
+        }
+}
+
+//modificateur img carte restaurant page menu
+
+.rest-card-image.rest-card-image--menu{
+    & img{
+       height: 240px;
+       border-radius: inherit;
+       
+    }
+}

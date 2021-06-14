@@ -1,36 +1,44 @@
 @use "../1-abstracts/mixin" as *;
-.menu{
-    padding:0 20px;
-    @include lighter-bg;
-}
-.menu-heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-        & h1{
-            font-family: Shrikhand;
-            font-size: 1.6em;
-        }
- 
-}
-.entree >h2{
-
-    font-size: 1.3em;
-    font-weight: 400;
-    opacity: 0.7;
+main{
+    @include lighter-bg; 
 }
 
-.titles-price-wrapper{
-    display: flex;
-    justify-content: flex-start;
+.menu {
+  padding: 0 20px;
+  border-radius: 60px 60px 0 0;
+  @include lighter-bg; 
+  position: relative;
+  top: -50px;
+  height: auto;
 }
-.price{
-    position: absolute;
-    right: 1rem;
-    bottom: -0.4rem;
+.menu-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+
+  & h1 {
+    font-family: Shrikhand;
+    font-size: 1.6em;
+  }
+}
+.menu-content > h2 {
+  font-size: 1.3em;
+  font-weight: 400;
+  opacity: 0.7;
 }
 
-.price >p{
-    font-size: 1.2em;
+.titles-price-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.price {
+  position: absolute;
+  right: 1rem;
+  bottom: -0.4rem;
+}
+
+.price > p {
+  font-size: 1.2em;
 }

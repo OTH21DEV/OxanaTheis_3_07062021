@@ -1,145 +1,110 @@
 @use "../1-abstracts" as *;
 
 .intro {
-   @include light-bg;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
+  @include light-bg;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .intro__main-heading {
-    margin-top: 0px;
-    padding-top: 30px;
-    text-align: center;
-    font-size: 1.3em;
-    font-weight: bold;
-   
+  margin-top: 0px;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 .intro__byline-heading {
-    text-align: center;
-    opacity: 0.6;
-    font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 0;
-    }
-
+  text-align: center;
+  opacity: 0.6;
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 0;
+}
 
 .selection {
-    padding: 30px 20px 40px 20px;
+  padding: 30px 20px 40px 20px;
 
-    
-    & h3 { 
+  & h3 {
     font-size: 1.3em;
-
-
-    }
+  }
 }
 
-.selection-btn{
-    position: relative;
+.selection-btn {
+  position: relative;
 
-        &__number{
-            content: "";
-            position: absolute;
-            background-color: $color-primary;
-            color: white;
-            border-radius: 20px;
-            width: 28px;
-            height: 28px;
-            left: -0.5rem;
-            top:1.2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-   
-    :hover{
-        @include selection-btn-gradient;
-       
-    }
-}
-
-
-
-.selection-btn__icon{
- 
-    width: 25%;
-    color: scale-color($color: $dark-bg,  $blackness: 90%,);
-    font-weight: bold;
-    font-size: 1.5em;
-
-    :hover{
-
-        color:$color-primary;
-    }
-}
-
-
-
-.selection-btn__text{
- 
-    width: 80%;
-
-
-    & p{
-         text-align: left;
-         font-size: 1.2em;
-  
-}
-}
-.rest{
-    padding: 40px 20px 30px 20px;
-    
-    @include light-bg;
-    height: auto;
-    
-}
-
-.rest-card{
-
-    border-radius: 20px;
-    margin-bottom: 20px;
-    height: 230px;
-    background-color: white;
-
-    @include  selection-btn-shadow;
-    position: relative;
-
-}
-
-
-.rest-card__image{
-    width: 100%;
-       
-
-    & img{
-        width: 100%;
-        border-radius: 20px 20px 0 0;
-        height: 150px;
-        object-fit: cover;
-        }
-}
-
-
-.rest-card__wrapper-titles-icon{
-    display: flex;
-    justify-content: space-between;
-}
-  
-
-.rest-card__label{
+  &__number {
+    content: "";
     position: absolute;
-    background-color: $color-tertiary;
-
-    font-weight: bold;
-    height: 30px;
-    width: 80px;
-    color: darken($color: $color-tertiary, $amount: 38%);
-    bottom:11rem;
-    right:1rem;
+    background-color: $color-primary;
+    color: white;
+    border-radius: 20px;
+    width: 28px;
+    height: 28px;
+    left: -0.5rem;
+    top: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  :hover {
+    @include selection-btn-gradient;
+  }
 }
 
+.selection-btn__icon {
+  width: 25%;
+  color: scale-color($color: $dark-bg, $blackness: 90%);
+  font-weight: bold;
+  font-size: 1.5em;
+
+  :hover {
+    color: $color-primary;
+  }
+}
+
+.selection-btn__text {
+  width: 80%;
+
+  & p {
+    text-align: left;
+    font-size: 1.2em;
+  }
+}
+.rest {
+  padding: 40px 20px 30px 20px;
+
+  @include light-bg;
+  height: auto;
+}
+
+.rest-card {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 230px;
+  background-color: white;
+
+  @include selection-btn-shadow;
+  position: relative;
+}
+
+.rest-card__wrapper-titles-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rest-card__label {
+  position: absolute;
+  background-color: $color-tertiary;
+
+  font-weight: bold;
+  height: 30px;
+  width: 80px;
+  color: darken($color: $color-tertiary, $amount: 38%);
+  bottom: 11rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

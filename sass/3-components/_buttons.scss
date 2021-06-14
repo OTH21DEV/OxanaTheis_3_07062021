@@ -1,54 +1,63 @@
 @use "../1-abstracts" as *;
 
-.btn-wrapper{
-    display: flex;
-    justify-content: center;
-    padding:30px 0 50px 0;
+//wrapper btn page d'accueil "explorer"
+
+.btn-wrapper { 
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 50px 0;
+
+//modificateur wrapper btn page menu "commander"
+
+    &.btn-wrapper--order {
+        padding: 20px 0 0 0;
     
-    &.btn-wrapper--order{
-        padding-top:40px;
-    }
-} 
-    
+  }
+}
+//btn page d'accueil "explorer"
+
+.btn-gradient {
+  color: white;
+  width: 190px;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  @include gradient;
 
 
-.btn-gradient{
-    color: white;
-    width: 190px;
-    height: 45px;
-    border-radius: 20px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-   
-   @include gradient;
+//modificateur btn page menu "commander"
 
-    &.btn-gradient--order{
+    &.btn-gradient--order {
         width: 160px;
-       
-    }
+
+  }
 }
 
-.btn-choice{
+//bouttons page d'accueil "fonctionnement"
 
-    
-    width: 100%;
-    height: 70px;
-    border-radius: 25px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    
-    @include lighter-bg;
-    @include selection-btn-shadow;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     
-    &.btn-choice--menu{
+.btn-choice {
+  width: 100%;
+  height: 70px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  @include lighter-bg;
+  @include selection-btn-shadow;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  //modificateur bouttons-page menu "fonctionnement"
+
+    &.btn-choice--menu {
         justify-content: flex-start;
         background-color: white;
         position: relative;
-    }
+  }
 }

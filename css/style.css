@@ -20,7 +20,7 @@ body {
   font-size: 1.3em;
   width: 100px;
   position: absolute;
-  left: 1rem;
+  left: 1.6rem;
   bottom: 1.3rem;
 }
 
@@ -98,7 +98,7 @@ a {
   padding: 30px 0 50px 0;
 }
 .btn-wrapper.btn-wrapper--order {
-  padding-top: 40px;
+  padding: 20px 0 0 0;
 }
 
 .btn-gradient {
@@ -168,6 +168,21 @@ a {
 }
 .titles.titles--menu h3 {
   font-size: 1.1em;
+}
+
+.rest-card-image {
+  width: 100%;
+}
+.rest-card-image img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  height: 150px;
+  object-fit: cover;
+}
+
+.rest-card-image.rest-card-image--menu img {
+  height: 240px;
+  border-radius: inherit;
 }
 
 .intro {
@@ -254,16 +269,6 @@ a {
   position: relative;
 }
 
-.rest-card__image {
-  width: 100%;
-}
-.rest-card__image img {
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-  height: 150px;
-  object-fit: cover;
-}
-
 .rest-card__wrapper-titles-icon {
   display: flex;
   justify-content: space-between;
@@ -283,22 +288,31 @@ a {
   align-items: center;
 }
 
+main {
+  background-color: #f8f8f7;
+}
+
 .menu {
   padding: 0 20px;
+  border-radius: 60px 60px 0 0;
   background-color: #f8f8f7;
+  position: relative;
+  top: -50px;
+  height: auto;
 }
 
 .menu-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0;
 }
 .menu-heading h1 {
   font-family: Shrikhand;
   font-size: 1.6em;
 }
 
-.entree > h2 {
+.menu-content > h2 {
   font-size: 1.3em;
   font-weight: 400;
   opacity: 0.7;

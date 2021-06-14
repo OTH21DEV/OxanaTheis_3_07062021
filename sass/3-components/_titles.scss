@@ -1,4 +1,6 @@
 
+//titles page d'accueil-carte restaurant
+
 .titles{
     display: flex;
     flex-direction: column;
@@ -9,20 +11,22 @@
     background-color: white;
 
     
-    & h2{
-        font-size: 1em;
-        margin: 0;
-      
-    }
-    & h3{
-        font-size: 0.9em;
-        font-weight: 400;
-        margin: 0;
-        line-height: 1em;
+        & h2{
+            font-size: 1em;
+            margin: 0;
     }
 
+        & h3{
+            font-size: 0.9em;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1em;
+    }
+
+//modificateur titles page menu -carte menu
+
         &.titles--menu{
-          //  position: relative;
+          
             line-height: 2.2em;
 
             & h2{
