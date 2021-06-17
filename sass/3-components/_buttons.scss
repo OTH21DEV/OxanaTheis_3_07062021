@@ -3,16 +3,15 @@
 
 //wrapper btn page d'accueil "explorer"
 
-.btn-wrapper { 
+.btn-wrapper {
   display: flex;
   justify-content: center;
   padding: 30px 0 50px 0;
 
-//modificateur wrapper btn page menu "commander"
+  //modificateur wrapper btn page menu "commander"
 
-    &.btn-wrapper--order {
-        padding: 20px 0 0 0;
-    
+  &.btn-wrapper--order {
+    padding: 20px 0 0 0;
   }
 }
 //btn page d'accueil "explorer"
@@ -26,40 +25,39 @@
   font-weight: bold;
   cursor: pointer;
 
-  //@include gradient;
-
-
-  background-color: linear-gradient($color-primary, $color-secondary);
-
+  background: linear-gradient($color-secondary 0%, $color-primary 100%);
   position: relative;
-  z-index:1;
+  z-index: 1;
 
-    &:hover{
+  &:hover {
 
-      &::after{
-        content: "";
-        opacity:1;
-      }
+    &::after {
+      content: "";
+      opacity: 1;
     }
-          &::after{
-            content: "";
-            position: absolute;
-            border-radius: 20px;
-            top:0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity:0;
-            background-color: scale-color($color: red, $lightness:5%);
-            z-index:-1;
-            transition:opacity 350ms;
-          }
+  }
 
-//modificateur btn page menu "commander"
+    &::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: linear-gradient(lighten($color: $color-secondary, $amount: 5) 0%, lighten($color-primary,5 )100%);
+    
+    z-index: -1;
+    box-shadow: 0px 0px 15px 2px rgb(192, 191, 191);
+    transition: opacity 250ms;
+    
+  }
 
-    &.btn-gradient--order {
-        width: 160px;
+  //modificateur btn page menu "commander"
 
+  &.btn-gradient--order {
+    width: 160px;
   }
 }
 
@@ -72,19 +70,57 @@
   border: none;
   font-weight: bold;
   cursor: pointer;
-
   @include light-bg;
   @include selection-btn-shadow;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  
+  
+//et si juste un hover avec la couleur ?
+
+    &:hover {
+
+     
+      &::after {
+      
+        content: "";
+        opacity:0;
+    
+        
+     
+   }
+       
+  
+          &::after  {
+          
+ 
+            content: "";
+            position: absolute;
+            top:0;
+            bottom:0;
+            right: 0;
+            left:0;
+            border-radius: 25px;
+            opacity:1;
+            z-index:-1;
+            
+            background:lighten($color: $color-primary, $amount: 35);
+            transition: opacity 250ms;
+   }
+ }
+
+    
+
 
   //modificateur bouttons-page menu "fonctionnement"
 
-    &.btn-choice--menu {
-        justify-content: flex-start;
-        background-color: white;
-        position: relative;
+  &.btn-choice--menu {
+    justify-content: flex-start;
+    background-color: white;
+    //position: relative;
   }
 }

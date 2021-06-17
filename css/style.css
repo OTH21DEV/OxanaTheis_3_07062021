@@ -109,7 +109,7 @@ a {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  background-color: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#FF79DA 0%, #9356DC 100%);
   position: relative;
   z-index: 1;
 }
@@ -126,9 +126,10 @@ a {
   bottom: 0;
   left: 0;
   opacity: 0;
-  background-color: #ff0d0d;
+  background: linear-gradient(#ff93e1 0%, #a16be0 100%);
   z-index: -1;
-  transition: opacity 350ms;
+  box-shadow: 0px 0px 15px 2px #c0bfbf;
+  transition: opacity 250ms;
 }
 .btn-gradient.btn-gradient--order {
   width: 160px;
@@ -147,11 +148,29 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.btn-choice:hover::after {
+  content: "";
+  opacity: 0;
+}
+.btn-choice:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 25px;
+  opacity: 1;
+  z-index: -1;
+  background: #f2eafb;
+  transition: opacity 250ms;
 }
 .btn-choice.btn-choice--menu {
   justify-content: flex-start;
   background-color: white;
-  position: relative;
 }
 
 .heart-icon {
@@ -206,12 +225,12 @@ a {
 }
 
 .loader {
-  top: 0;
-  left: 0;
+  position: fixed;
   width: 100%;
   height: 100%;
-  background-color: white;
-  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .loader__item-oh {
@@ -223,11 +242,13 @@ a {
   height: 15vw;
   border-radius: 100%;
   background-color: #9356DC;
-  position: absolute;
-  animation: testanimation 1300ms 0.2s linear infinite;
-  top: 15rem;
-  left: 3rem;
+  animation-delay: 0.1s;
   font-size: 1.2em;
+  animation: testanimation 1100ms 0.1s linear;
+  animation-iteration-count: 4;
+  animation-fill-mode: backwards;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .loader__item-my {
@@ -239,11 +260,12 @@ a {
   height: 15vw;
   border-radius: 100%;
   background-color: #FF79DA;
-  position: absolute;
-  animation: testanimation 1300ms 0.2s linear infinite;
-  top: 15rem;
-  left: 10rem;
+  animation: testanimation 1100ms 0.2s linear;
+  animation-iteration-count: 4;
+  animation-fill-mode: backwards;
   font-size: 1.2em;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .loader__item-food {
@@ -255,37 +277,44 @@ a {
   height: 15vw;
   border-radius: 100%;
   background-color: #99E2D0;
-  position: absolute;
-  animation: testanimation 1300ms 0.3s linear infinite;
-  top: 15rem;
-  left: 17rem;
+  animation: testanimation 1100ms 0.3s linear;
+  animation-iteration-count: 4;
+  animation-fill-mode: backwards;
+  opacity: 0;
   font-size: 1.2em;
+  overflow: hidden;
 }
 
 @keyframes testanimation {
   0% {
     transform: scale(1);
     filter: blur(0px);
+    opacity: 1;
   }
   25% {
     transform: scale(0.4);
     filter: blur(3px);
+    opacity: 1;
   }
   50% {
     transform: scale(0.8);
     filter: blur(3px);
+    opacity: 1;
   }
   75% {
     transform: scalex(1);
     filter: blur(3px);
+    opacity: 1;
   }
   85% {
     transform: scalex(1.1);
     filter: blur(0px);
+    opacity: 1;
   }
   100% {
     transform: scale(1);
     filter: blur(0px);
+    opacity: 1;
   }
 }
 .intro {
@@ -319,24 +348,25 @@ a {
 }
 
 .selection-btn {
+  display: flex;
+  align-items: center;
   position: relative;
 }
+
 .selection-btn__number {
-  content: "";
+  display: inline-block;
   position: absolute;
   background-color: #9356DC;
   color: white;
   border-radius: 20px;
   width: 28px;
   height: 28px;
-  left: -0.5rem;
-  top: 1.2rem;
+  left: -12px;
+  bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.selection-btn :hover {
-  background-color: #f4eefc;
+  z-index: 2;
 }
 
 .selection-btn__icon {
@@ -344,9 +374,6 @@ a {
   color: #7d7d7d;
   font-weight: bold;
   font-size: 1.5em;
-}
-.selection-btn__icon :hover {
-  color: #9356DC;
 }
 
 .selection-btn__text {
