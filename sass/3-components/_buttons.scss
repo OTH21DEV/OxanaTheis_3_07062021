@@ -74,7 +74,6 @@
   @include selection-btn-shadow;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -82,22 +81,21 @@
   
 //et si juste un hover avec la couleur ?
 
-    &:hover {
+    &:hover .selection-btn__icon{
 
-     
-      &::after {
-      
-        content: "";
-        opacity:0;
+      color:$color-primary;
     
-        
-     
+
+          &::after {
+      
+            content: "";
+            opacity:0;
+
    }
-       
+  
   
           &::after  {
           
- 
             content: "";
             position: absolute;
             top:0;
@@ -107,7 +105,6 @@
             border-radius: 25px;
             opacity:1;
             z-index:-1;
-            
             background:lighten($color: $color-primary, $amount: 35);
             transition: opacity 250ms;
    }
