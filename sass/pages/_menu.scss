@@ -1,5 +1,5 @@
-@use "../1-abstracts/mixin" as *;
-@use "../1-abstracts/variables" as *;
+@use "../abstracts/mixin" as *;
+@use "../abstracts/variables" as *;
 
 main {
   @include lighter-bg;
