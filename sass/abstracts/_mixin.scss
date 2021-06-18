@@ -44,3 +44,17 @@ background-color: scale-color($color: $dark-bg,  $lightness: 20%,);
 @mixin grey-bg{
 background-color: scale-color($color: black,  $lightness: 20%,);
 }
+
+//Animation page accueil loader
+
+@mixin loading-ball {
+
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  font-size: 1.2em;
+}

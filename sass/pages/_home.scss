@@ -2,96 +2,88 @@
 @use "../abstracts/mixin" as *;
 
 .loader{
- position: fixed;
-
-  width: 100%;
-  height: 100%;
-//z-index:99999;
-
+position: fixed;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+width: 100%;
+height: 100%;
+overflow: hidden;
+background-color: white;
+z-index:99999;
+visibility: hidden;
+animation:loading 4s linear ;
 
+}
 
+@keyframes loading{
+  0%{
+    visibility: visible;
+  
+  }
+  90%{
+    opacity: 1;
+  }
+  99%{
+    visibility: visible;
+    opacity: 1;
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 
 .loader__item-oh {
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Shrikhand;
-  width: 15vw;
-  height: 15vw;
-  border-radius: 100%;
-  background-color: $color-primary;
-animation-delay: 0.1s;
-font-size: 1.2em;
- animation: testanimation 1100ms 0.1s  linear ;
- animation-iteration-count:4;
-animation-fill-mode: backwards;
- 
+@include loading-ball;
+ animation: testanimation 1100ms linear backwards;
+ animation-iteration-count:3;
  opacity: 0;
  overflow: hidden;
-
+ background-color: $color-primary;
+ animation-delay: 0.1s;
 }
 
 
 
 
 .loader__item-my {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Shrikhand;
-  width: 15vw;
-  height: 15vw;
-  border-radius: 100%;
+  @include loading-ball;
   background-color: $color-secondary;
-
-  animation: testanimation 1100ms 0.2s linear ;
-  animation-iteration-count:4;
-  animation-fill-mode: backwards;
- 
+  animation: testanimation 1100ms linear backwards ;
+  animation-iteration-count:3;
   font-size: 1.2em;
   opacity: 0;
   overflow: hidden;
+  background-color: $color-secondary;
+  animation-delay: 0.2s;
 }
 
 .loader__item-food {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Shrikhand;
-  width: 15vw;
-  height: 15vw;
-  border-radius: 100%;
-  background-color: $color-tertiary;
-
-  animation: testanimation 1100ms 0.3s linear ;
-  animation-iteration-count:4;
-  animation-fill-mode: backwards;
- 
+  @include loading-ball;
+  animation: testanimation 1100ms linear backwards;
+  animation-iteration-count:3;
   opacity: 0;
   font-size: 1.2em;
   overflow: hidden;
+  background-color: $color-tertiary;
+  animation-delay: 0.3s;
 }
+
 @keyframes testanimation {
   0% {
     transform: scale(1);
     filter: blur(0px);
     opacity: 1;
   
-   
-    
   }
 
  25% {
    transform: scale(0.4);
     filter: blur(3px);
     opacity: 1;
-   
    
   
  }
@@ -107,7 +99,6 @@ animation-fill-mode: backwards;
     filter: blur(3px);
     opacity: 1;
   
-    
   }
 
   85% {
@@ -115,17 +106,14 @@ animation-fill-mode: backwards;
     filter: blur(0px);
     opacity: 1;
   
-    
-   
  }
   100% {
    transform: scale(1);
     filter: blur(0px);
     opacity: 1;
   
-  
-  
-}}
+}
+}
 
 
 
