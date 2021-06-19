@@ -50,4 +50,25 @@ main {
   opacity: 0.8;
   font-size: 1em;
 }
+.check{
+  width:70px;
+  height: 70px;
+  background-color: $color-tertiary;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  animation:check-anim2 250ms linear reverse;
+  overflow: hidden;
+}
 
+.fa-check-circle{
+  color: $color-tertiary;
+  font-size: 1.5em;
+  
+  
+ 
+}

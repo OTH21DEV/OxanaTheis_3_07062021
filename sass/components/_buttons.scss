@@ -26,32 +26,13 @@
   cursor: pointer;
 
   background: linear-gradient($color-secondary 0%, $color-primary 100%);
-  position: relative;
-  z-index: 1;
 
   &:hover {
-
-    &::after {
-      content: "";
-      opacity: 1;
-    }
-  }
-
-    &::after {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    background: linear-gradient(lighten($color: $color-secondary, $amount: 5) 0%, lighten($color-primary,5 )100%);
-    
-    z-index: -1;
+    background: linear-gradient(
+      lighten($color: $color-secondary, $amount: 5) 0%,
+      lighten($color-primary, 5) 100%
+    );
     box-shadow: 0px 0px 15px 2px rgb(192, 191, 191);
-    transition: opacity 250ms;
-    
   }
 
   //modificateur btn page menu "commander"
@@ -70,54 +51,107 @@
   border: none;
   font-weight: bold;
   cursor: pointer;
-  @include light-bg;
+  //@include light-bg;
   @include selection-btn-shadow;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 1;
-  
-  
-//et si juste un hover avec la couleur ?
 
-    &:hover .selection-btn__icon{
+  //et si juste un hover avec la couleur ?
 
-      color:$color-primary;
-    
+  &:hover .selection-btn__icon {
+    color: $color-primary;
 
-          &::after {
-      
-            content: "";
-            opacity:0;
+    &::after {
+      content: "";
+      opacity: 0;
+    }
 
-   }
-  
-  
-          &::after  {
-          
-            content: "";
-            position: absolute;
-            top:0;
-            bottom:0;
-            right: 0;
-            left:0;
-            border-radius: 25px;
-            opacity:1;
-            z-index:-1;
-            background:lighten($color: $color-primary, $amount: 35);
-            transition: opacity 250ms;
-   }
- }
-
-    
-
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border-radius: 25px;
+      opacity: 1;
+      z-index: -1;
+      background: lighten($color: $color-primary, $amount: 35);
+      transition: opacity 250ms;
+    }
+  }
 
   //modificateur bouttons-page menu "fonctionnement"
+
+  $nmb-btn: 10;
+  $anim-dur: 1700ms;
+  $anim-delay: $anim-dur/$nmb-btn;
 
   &.btn-choice--menu {
     justify-content: flex-start;
     background-color: white;
-    //position: relative;
+    opacity: 0;
+    animation: menu $anim-dur forwards;
+
+
+//boucle pour la creation de delai de l'animation pour chaque bouton-menu
+
+    @for $i from 1 through $nmb-btn {
+
+      &.btn-choice:nth-child(#{$i}) {
+
+        animation-delay: $anim-delay*$i;
+      }
+    }
   }
+}
+
+  @keyframes menu {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+.btn-choice--menu:hover .check{
+animation:check-anim 250ms linear forwards alternate;
+
+
+}
+
+@keyframes check-anim{
+  0%{
+
+   width: 0px;
+    opacity:0;
+  }
+
+  100%{
+   
+    opacity:1;
+}
+}
+
+@keyframes check-anim2{
+  0%{
+    
+   width: 0px;
+    opacity:0;
+    
+  }
+  
+  
+  100%{
+ 
+    opacity:1;
+ 
+    
+}
 }
