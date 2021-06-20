@@ -158,6 +158,7 @@ a {
   background-color: white;
   opacity: 0;
   animation: menu 1700ms forwards;
+  overflow: hidden;
 }
 .btn-choice.btn-choice--menu.btn-choice:nth-child(1) {
   animation-delay: 170ms;
@@ -201,24 +202,26 @@ a {
   }
 }
 .btn-choice--menu:hover .check {
-  animation: check-anim 250ms linear forwards alternate;
+  animation: check-on 450ms linear forwards;
+  overflow: hidden;
+  opacity: 1;
 }
 
-@keyframes check-anim {
+@keyframes check-on {
   0% {
-    width: 0px;
-    opacity: 0;
+    transform: translateX(100%);
   }
   100% {
-    opacity: 1;
+    transform: translateX(0%);
   }
 }
-@keyframes check-anim2 {
+@keyframes check-off {
   0% {
-    width: 0px;
-    opacity: 0;
+    transform: translateX(100%);
+    opacity: 1;
   }
   100% {
+    transform: translateX(0%);
     opacity: 1;
   }
 }
@@ -595,13 +598,13 @@ main {
   align-items: center;
   position: absolute;
   right: 0px;
-  opacity: 0;
-  animation: check-anim2 250ms linear reverse;
   overflow: hidden;
+  opacity: 0;
+  animation: check-off 450ms linear reverse;
 }
 
 .fa-check-circle {
-  color: #99E2D0;
+  color: white;
   font-size: 1.5em;
 }
 

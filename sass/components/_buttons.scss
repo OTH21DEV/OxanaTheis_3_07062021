@@ -95,7 +95,7 @@
     background-color: white;
     opacity: 0;
     animation: menu $anim-dur forwards;
-
+    overflow: hidden;
 
 //boucle pour la creation de delai de l'animation pour chaque bouton-menu
 
@@ -121,37 +121,39 @@
   }
 
 .btn-choice--menu:hover .check{
-animation:check-anim 250ms linear forwards alternate;
 
-
+  animation:check-on 450ms linear forwards;
+  overflow: hidden;
+  opacity:1;
 }
 
-@keyframes check-anim{
+
+@keyframes check-on{
+
   0%{
 
-   width: 0px;
-    opacity:0;
+    transform:translateX(100%);
+
   }
 
+  
   100%{
-   
-    opacity:1;
+
+    transform:translateX(0%);
+    
 }
 }
 
-@keyframes check-anim2{
+
+@keyframes check-off{
+
   0%{
-    
-   width: 0px;
-    opacity:0;
-    
+    transform:translateX(100%);
+    opacity:1;
   }
   
-  
   100%{
- 
+    transform:translateX(0%);
     opacity:1;
- 
-    
 }
 }

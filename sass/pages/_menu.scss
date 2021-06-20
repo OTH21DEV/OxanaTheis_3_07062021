@@ -60,13 +60,15 @@ main {
   align-items: center;
   position: absolute;
   right: 0px;
-  opacity: 0;
-  animation:check-anim2 250ms linear reverse;
   overflow: hidden;
+  opacity: 0;
+
+  animation:check-off 450ms linear reverse;
+
 }
 
 .fa-check-circle{
-  color: $color-tertiary;
+  color: white;
   font-size: 1.5em;
   
   
