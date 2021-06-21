@@ -8,8 +8,10 @@
     padding:10px 20px;
     font-size: 1.5em;
     overflow: hidden;
-
 }
+
+
+//Test 1
 //empty
 .heart-icon .far {
     position: relative;
@@ -25,21 +27,26 @@
 
 
 position: absolute;
-right:2.5rem;
+//right:2.5rem;
+right:2.65rem;
+
+
 opacity:0;
 cursor: pointer;
+font-size: 0.8em;
+padding-top: 4px; 
+padding-left:4px;
 
-
-background-color:$color-secondary;
+//background-color:$color-secondary;
 background-clip: text;
--webkit-text-fill-color: transparent;
+-webkit-text-fill-color: $color-secondary;
 
-
+overflow: hidden;
 
 
 &:hover{
 opacity: 1;
-animation: heart 1000ms;
+animation: heart 800ms infinite;
 
 
 }
@@ -51,13 +58,29 @@ animation: heart 1000ms;
 @keyframes heart{
     0%{
         opacity:1;
+        transform: scale(0);
+        transform-origin: bottom;
         
-        transform: translateY(100%);
+        
+       // transform: translateY(100%);
     }
+    
+   
+    50%{
+        opacity:1;
+        transform: scale(0.7,0.4);
+        transform-origin: bottom;
+        
+        
+       // transform: translateY(100%);
+    }
+
   
     100%{
         opacity:1;
-        transform: translateY(0%);
+       // transform: translateY(0%);
+       transform: scale(1);
+    
         
         
     }
