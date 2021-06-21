@@ -127,6 +127,10 @@
   opacity:1;
 }
 
+.btn-choice--menu:hover .fa-check-circle{
+  animation:circle-turn-on 350ms ;
+
+}
 
 @keyframes check-on{
 
@@ -156,4 +160,24 @@
     transform:translateX(0%);
     opacity:1;
 }
+}
+
+@keyframes circle-turn-on{
+ 
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-turn-off{
+ 
+  50%{
+    transform: rotate(-180deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
 }
