@@ -97,6 +97,8 @@
     animation: menu $anim-dur forwards;
     overflow: hidden;
 
+ 
+
 //boucle pour la creation de delai de l'animation pour chaque bouton-menu
 
     @for $i from 1 through $nmb-btn {

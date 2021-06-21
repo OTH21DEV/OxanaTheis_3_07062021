@@ -29,12 +29,20 @@
         &.titles--menu{
           
             line-height: 2.2em;
+            overflow: hidden;
+  
 
             & h2{
                 font-size: 1.1em;
+             text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
             }
             & h3{
                 font-size: 1em;
+             text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
             }
         }
 }
