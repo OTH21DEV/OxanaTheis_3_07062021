@@ -120,7 +120,7 @@
     }
   }
 
-.btn-choice--menu:hover .check{
+.btn-choice--menu:hover .check {
 
   animation:check-on 450ms linear forwards;
   overflow: hidden;
@@ -130,6 +130,14 @@
 .btn-choice--menu:hover .fa-check-circle{
   animation:circle-turn-on 350ms ;
 
+}
+
+.btn-choice--menu:hover .price {
+
+  animation:check-on 450ms linear backwards;
+  animation-delay: 50ms;
+  overflow: hidden;
+  opacity:1;
 }
 
 @keyframes check-on{
@@ -181,3 +189,5 @@
     transform: rotate(-360deg);
   }
 }
+
+

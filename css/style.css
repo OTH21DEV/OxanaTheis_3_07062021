@@ -211,6 +211,13 @@ a {
   animation: circle-turn-on 350ms;
 }
 
+.btn-choice--menu:hover .price {
+  animation: check-on 450ms linear backwards;
+  animation-delay: 50ms;
+  overflow: hidden;
+  opacity: 1;
+}
+
 @keyframes check-on {
   0% {
     transform: translateX(100%);
@@ -602,10 +609,15 @@ main {
 
 .price {
   position: absolute;
-  right: 1.5rem;
+  right: 3rem;
   bottom: -0.1rem;
   opacity: 0.8;
   font-size: 1em;
+  width: 70px;
+  display: flex;
+  justify-content: end;
+  animation: check-off 450ms linear forwards reverse;
+  animation-delay: 50ms;
 }
 
 .check {
