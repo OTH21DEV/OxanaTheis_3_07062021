@@ -6,7 +6,7 @@
 
 .heart-icon{
     padding:10px 20px;
-    font-size: 1.5em;
+    font-size: 1.4em;
     overflow: hidden;
 }
 
@@ -43,15 +43,15 @@ background-clip: text;
 
 overflow: hidden;
 
-
 &:hover{
 opacity: 1;
-animation: heart 800ms infinite;
+
+animation: heart 1000ms linear ;
 
 
 }
-}
 
+}
 
 
 
@@ -71,7 +71,7 @@ animation: heart 800ms infinite;
         transform: scale(0.7,0.4);
         transform-origin: bottom;
         
-        
+       
        // transform: translateY(100%);
     }
 

@@ -63,26 +63,15 @@
 
   &:hover .selection-btn__icon {
     color: $color-primary;
+    background: lighten($color: $color-primary, $amount: 35);
 
-    &::after {
-      content: "";
-      opacity: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      border-radius: 25px;
-      opacity: 1;
-      z-index: -1;
-      background: lighten($color: $color-primary, $amount: 35);
-      transition: opacity 250ms;
-    }
   }
+
+  &:hover{
+    background: lighten($color: $color-primary, $amount: 35);
+  }
+  
+  
 
   //modificateur bouttons-page menu "fonctionnement"
 

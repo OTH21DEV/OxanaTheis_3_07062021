@@ -135,23 +135,10 @@ a {
 }
 .btn-choice:hover .selection-btn__icon {
   color: #9356DC;
-}
-.btn-choice:hover .selection-btn__icon::after {
-  content: "";
-  opacity: 0;
-}
-.btn-choice:hover .selection-btn__icon::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border-radius: 25px;
-  opacity: 1;
-  z-index: -1;
   background: #f2eafb;
-  transition: opacity 250ms;
+}
+.btn-choice:hover {
+  background: #f2eafb;
 }
 .btn-choice.btn-choice--menu {
   justify-content: flex-start;
@@ -254,7 +241,7 @@ a {
 }
 .heart-icon {
   padding: 10px 20px;
-  font-size: 1.5em;
+  font-size: 1.4em;
   overflow: hidden;
 }
 
@@ -277,7 +264,7 @@ a {
 }
 .heart-icon .fas:hover {
   opacity: 1;
-  animation: heart 800ms infinite;
+  animation: heart 1000ms linear;
 }
 
 @keyframes heart {
@@ -318,7 +305,9 @@ a {
 }
 .titles.titles--menu {
   line-height: 2.2em;
+  text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .titles.titles--menu h2 {
   font-size: 1.1em;
