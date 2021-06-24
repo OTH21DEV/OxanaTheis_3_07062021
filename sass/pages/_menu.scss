@@ -43,6 +43,8 @@ main {
   display: flex;
   justify-content: flex-start;
 }
+
+/*
 .price {
   position: absolute;
   right: 3rem;
@@ -56,6 +58,25 @@ main {
   animation-delay: 100ms;
   
 }
+
+*/
+
+.price {
+  
+  opacity: 0.8;
+  font-size: 1em;
+  width: 70px;
+  display: flex;
+  justify-content: end;
+  align-self: flex-end;
+  margin-right: 40px;
+  animation: check-off 450ms linear forwards reverse;
+  animation-delay: 100ms;
+  
+}
+
+
+
 .check{
   width:70px;
   height: 70px;

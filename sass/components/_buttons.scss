@@ -80,7 +80,8 @@
   $anim-delay: $anim-dur/$nmb-btn;
 
   &.btn-choice--menu {
-    justify-content: flex-start;
+   // justify-content: flex-start;
+   justify-content: space-between;
     background-color: white;
     opacity: 0;
     animation: menu $anim-dur forwards;
@@ -99,6 +100,9 @@
     }
   }
 }
+
+
+
 
   @keyframes menu {
     0% {
