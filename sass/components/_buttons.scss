@@ -129,17 +129,21 @@
 
 .btn-choice--menu:hover .price {
 
-  animation:check-on 450ms linear backwards;
-  animation-delay: 50ms;
+animation:check-ontest 450ms linear backwards;
+  //animation-delay: 50ms;
   overflow: hidden;
   opacity:1;
 }
+
+
+
 
 @keyframes check-on{
 
   0%{
 
     transform:translateX(100%);
+    
 
   }
 
@@ -186,3 +190,108 @@
 }
 
 
+.btndeux{
+  width: 100%;
+  height: 70px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  //@include light-bg;
+  @include selection-btn-shadow;
+  margin-bottom: 20px;
+  background-color: white;
+//  opacity: 0;
+  //animation: menu $anim-dur forwards;
+  overflow: hidden;
+
+  //position: relative;
+  display:grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0 20px;
+  padding: 0;
+  
+
+ 
+
+  &:hover .check {
+
+  // animation:check-on 450ms linear forwards;
+    overflow: hidden;
+    opacity:1;
+    width: 70px;
+    //margin-top: -17px;
+   // margin-right: -56px;
+  transform: translateX(0);
+  }
+  
+  &:hover .fa-check-circle{
+    animation:circle-turn-on 350ms ;
+  
+  }
+  
+  &:hover .price {
+  
+   animation:check-on 450ms linear backwards;
+
+  //animation:testpricecheck-on 450ms linear backwards;
+    animation-delay: 50ms;
+    overflow: hidden;
+    opacity:1;
+   
+    
+  }
+  
+}
+
+
+
+@keyframes check-on{
+
+  0%{
+
+    transform:translateX(100%);
+
+  }
+
+  
+  100%{
+
+    transform:translateX(15%);
+    
+}
+}
+
+
+@keyframes check-off{
+
+  0%{
+    transform:translateX(100%);
+  
+  }
+  
+  100%{
+    transform:translateX(15%);
+ 
+}
+}
+
+@keyframes circle-turn-on{
+ 
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-turn-off{
+ 
+  50%{
+    transform: rotate(-180deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}

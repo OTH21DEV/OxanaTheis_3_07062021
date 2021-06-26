@@ -65,18 +65,26 @@ main {
   
   opacity: 0.8;
   font-size: 1em;
-  width: 70px;
-  display: flex;
-  justify-content: end;
-  align-self: flex-end;
-  margin-right: 40px;
-  animation: check-off 450ms linear forwards reverse;
-  animation-delay: 100ms;
-  
+  margin: 0;
+ // width: 100%;
+  //width: 70px;
+ // display: flex;
+ // justify-content: end;
+ // align-self: flex-end;
+  //margin-right: 40px;
+  animation: check-offtest 450ms linear forwards reverse;
+  //animation-delay: 100ms;
+  line-height: 2.2em;
+  //width:35%;
+
+  align-self: end;
 }
 
 
 
+
+
+/*
 .check{
   width:70px;
   height: 70px;
@@ -86,13 +94,45 @@ main {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 0px;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
   opacity: 0;
 
   animation:check-off 450ms linear reverse;
 
 }
+*/
+
+
+.check{
+ //width:70px;
+ width:0px;
+  height: 100%;
+  background-color: $color-tertiary;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+// position: absolute;
+  overflow: hidden;
+  opacity: 1;
+  transform:translateX(100%);
+ transition:transform 450 ms linear;
+ // right: 0;
+ // bottom:0;
+
+ //animation:check-off 450ms linear backwards;
+
+}
+
+
+
+
+
+
+
+
 
 .fa-check-circle{
   color: white;

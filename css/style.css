@@ -199,8 +199,7 @@ a {
 }
 
 .btn-choice--menu:hover .price {
-  animation: check-on 450ms linear backwards;
-  animation-delay: 50ms;
+  animation: check-ontest 450ms linear backwards;
   overflow: hidden;
   opacity: 1;
 }
@@ -239,58 +238,160 @@ a {
     transform: rotate(-360deg);
   }
 }
+.btndeux {
+  width: 100%;
+  height: 70px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 5px 8px 3px #e1e0e0;
+  margin-bottom: 20px;
+  background-color: white;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0 20px;
+  padding: 0;
+}
+.btndeux:hover .check {
+  overflow: hidden;
+  opacity: 1;
+  width: 70px;
+  transform: translateX(0);
+}
+.btndeux:hover .fa-check-circle {
+  animation: circle-turn-on 350ms;
+}
+.btndeux:hover .price {
+  animation: check-on 450ms linear backwards;
+  animation-delay: 50ms;
+  overflow: hidden;
+  opacity: 1;
+}
+
+@keyframes check-on {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+}
+@keyframes check-off {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+}
+@keyframes circle-turn-on {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circle-turn-off {
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 .heart-icon {
   padding: 10px 20px;
-  font-size: 1.4em;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .heart-icon .far {
   position: relative;
   cursor: pointer;
+  font-size: 1.7em;
 }
 
 .heart-icon .fas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  right: 2.65rem;
+  right: 2.62rem;
   opacity: 0;
   cursor: pointer;
-  font-size: 0.8em;
-  padding-top: 4px;
-  padding-left: 4px;
+  font-size: 1.38em;
   background-clip: text;
   -webkit-text-fill-color: #FF79DA;
   overflow: hidden;
 }
 .heart-icon .fas:hover {
   opacity: 1;
-  animation: heart 1000ms linear;
+  animation: heart 1000ms linear forwards;
 }
 
 @keyframes heart {
   0% {
-    opacity: 1;
-    transform: scale(0);
-    transform-origin: bottom;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.2;
   }
   50% {
-    opacity: 1;
-    transform: scale(0.7, 0.4);
-    transform-origin: bottom;
+    opacity: 0.3;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.5;
   }
   100% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0.9;
   }
 }
 .titles {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding: 5px 10px;
   line-height: 2em;
   background-color: white;
+  /*
+          &.titles--menu{
+
+              line-height: 2.2em;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+
+
+              & h2{
+                  font-size: 1.1em;
+               text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+              }
+              & h3{
+                  font-size: 1em;
+               text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              }
+
+
+          }
+
+          */
 }
 .titles h2 {
   font-size: 1em;
@@ -303,25 +404,67 @@ a {
   margin: 0;
   line-height: 1em;
 }
-.titles.titles--menu {
-  line-height: 2.2em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+
+/*
+.titles_test{
+    width: 45%;
 }
-.titles.titles--menu h2 {
-  font-size: 1.1em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.titles.titles--menu h3 {
-  font-size: 1em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+*/
+.test {
+  display: flex;
+  flex-direction: row;
+  animation: check-offtest 450ms linear forwards reverse;
 }
 
+.titles_test {
+  font-size: 1.1em;
+  text-align: start;
+  overflow: hidden;
+  margin: 0 20px;
+  grid-column-start: 1;
+}
+
+.titles_test h2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1em;
+}
+
+.titles_test h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1em;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/*
+            .test {
+                font-size: 1em;
+                font-weight: 400;
+            opacity: 0.7;
+            margin: 0;
+                text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 2.2em;
+            grid-column-start: 1;
+
+
+            }
+.test h3{
+    font-size: 1em;
+                font-weight: 400;
+            opacity: 0.7;
+            margin: 0;
+                text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 2.2em;
+            margin: 0 20px;
+}*/
 .rest-card-image {
   width: 100%;
 }
@@ -378,6 +521,7 @@ a {
   font-size: 1.2em;
   animation: testanimation 1100ms linear backwards;
   animation-iteration-count: 3;
+  opacity: 0;
   overflow: hidden;
   background-color: #9356DC;
   animation-delay: 0.1s;
@@ -396,6 +540,7 @@ a {
   animation: testanimation 1100ms linear backwards;
   animation-iteration-count: 3;
   font-size: 1.2em;
+  opacity: 0;
   overflow: hidden;
   background-color: #FF79DA;
   animation-delay: 0.2s;
@@ -614,28 +759,43 @@ main {
 .price {
   opacity: 0.8;
   font-size: 1em;
-  width: 70px;
-  display: flex;
-  justify-content: end;
-  align-self: flex-end;
-  margin-right: 40px;
-  animation: check-off 450ms linear forwards reverse;
-  animation-delay: 100ms;
+  margin: 0;
+  animation: check-offtest 450ms linear forwards reverse;
+  line-height: 2.2em;
+  align-self: end;
 }
 
-.check {
-  width: 70px;
+/*
+.check{
+  width:70px;
   height: 70px;
-  background-color: #99E2D0;
+  background-color: $color-tertiary;
   border-radius: 0 25px 25px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 0px;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
   opacity: 0;
-  animation: check-off 450ms linear reverse;
+
+  animation:check-off 450ms linear reverse;
+
+}
+*/
+.check {
+  width: 0px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateX(100%);
+  transition: transform 450 ms linear;
 }
 
 .fa-check-circle {
