@@ -23,52 +23,12 @@
             margin: 0;
             line-height: 1em;
     }
+}
+
 
 //modificateur titles page menu -carte menu
-/*
-        &.titles--menu{
-          
-            line-height: 2.2em;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-         
 
-            & h2{
-                font-size: 1.1em;
-             text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-            }
-            & h3{
-                font-size: 1em;
-             text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            }
-
-          
-        }
-
-        */
-}
-
-/*
-.titles_test{
-    width: 45%;
-}
-*/
-.test{
-    
-        display: flex;
-       flex-direction: row;
-      //justify-content: space-between;
-     
-      //animation: check-off 450ms linear forwards reverse;
-      animation:check-offtest 450ms linear forwards reverse;
-   
-}
-.titles_test {
+.btn-menu__titles {
     
                 font-size: 1.1em;
                 text-align: start;
@@ -77,50 +37,29 @@
             
             padding: 0 20px;
             grid-column-start: 1;
-       
+      
           
-}
-.titles_test h2{
+
+& h2{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     font-size: 1em;
-  
+    margin: 0;
+  padding: 5px 0;
 
 }
 
-.titles_test h3{
+& h3{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 
     font-size: 1em;
-                font-weight: 400;
+                font-weight: 200;
             opacity: 0.7;
+            margin: 0;
+            padding: 5px 0;
+
 }
-  
-/*
-            .test {
-                font-size: 1em;
-                font-weight: 400;
-            opacity: 0.7;
-            margin: 0;
-                text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            line-height: 2.2em;
-            grid-column-start: 1;
-           
-            
-            }
-.test h3{
-    font-size: 1em;
-                font-weight: 400;
-            opacity: 0.7;
-            margin: 0;
-                text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            line-height: 2.2em;
-            margin: 0 20px;
-}*/
+}

@@ -45,7 +45,7 @@ main {
 }
 
 
-.price {
+.btn-menu__price {
   
 
   font-size: 1em;
@@ -53,10 +53,16 @@ main {
   align-self: end;
   line-height: 2.2em;
 
+
+    & p{
+      padding-bottom: 5px;
+      margin:0;
+    }
+
 }
 
 
-.check{
+.btn-menu__check{
 
   width:0px;
   height: 100%;
