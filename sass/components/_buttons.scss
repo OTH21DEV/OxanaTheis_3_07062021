@@ -138,56 +138,7 @@ animation:check-ontest 450ms linear backwards;
 
 
 
-@keyframes check-on{
 
-  0%{
-
-    transform:translateX(100%);
-    
-
-  }
-
-  
-  100%{
-
-    transform:translateX(0%);
-    
-}
-}
-
-
-@keyframes check-off{
-
-  0%{
-    transform:translateX(100%);
-    opacity:1;
-  }
-  
-  100%{
-    transform:translateX(0%);
-    opacity:1;
-}
-}
-
-@keyframes circle-turn-on{
- 
-  50%{
-    transform: rotate(180deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes circle-turn-off{
- 
-  50%{
-    transform: rotate(-180deg);
-  }
-  100%{
-    transform: rotate(-360deg);
-  }
-}
 
 
 .btndeux{
@@ -216,82 +167,18 @@ animation:check-ontest 450ms linear backwards;
 
   &:hover .check {
 
-  // animation:check-on 450ms linear forwards;
     overflow: hidden;
     opacity:1;
     width: 70px;
-    //margin-top: -17px;
-   // margin-right: -56px;
-  transform: translateX(0);
+    transform: translateX(0);
   }
   
   &:hover .fa-check-circle{
-    animation:circle-turn-on 350ms ;
-  
-  }
-  
-  &:hover .price {
-  
-   animation:check-on 450ms linear backwards;
 
-  //animation:testpricecheck-on 450ms linear backwards;
-    animation-delay: 50ms;
-    overflow: hidden;
-    opacity:1;
-   
-    
+  transform: rotate(360deg);
+  opacity: 1;
   }
   
 }
 
 
-
-@keyframes check-on{
-
-  0%{
-
-    transform:translateX(100%);
-
-  }
-
-  
-  100%{
-
-    transform:translateX(15%);
-    
-}
-}
-
-
-@keyframes check-off{
-
-  0%{
-    transform:translateX(100%);
-  
-  }
-  
-  100%{
-    transform:translateX(15%);
- 
-}
-}
-
-@keyframes circle-turn-on{
- 
-  50%{
-    transform: rotate(180deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes circle-turn-off{
- 
-  50%{
-    transform: rotate(-180deg);
-  }
-  100%{
-    transform: rotate(-360deg);
-  }
-}
