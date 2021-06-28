@@ -5,124 +5,54 @@
 
 
 .heart-icon{
-    padding:10px 20px;
-   // font-size: 1.4em;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+  padding:10px 20px;
+   font-size: 1.4em;
+   overflow: hidden;
+  display: flex;
+   align-items: center;
+  
 }
 
 
-//Test 1
-//empty
-.heart-icon .far {
+.heart-icon .empty{
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.4em;
+    opacity: 1;
+    transition:opacity 1500ms linear;
+
+    &:hover{
+        opacity:0;
+    }
+}
+.empty:hover + .full::after{
+    transform: translateY(-100%);
+}
+
+.heart-icon .full{
     position: relative;
     cursor: pointer;
-    font-size: 1.7em;
-   
-}
-
-
-
-
-//full
-.heart-icon .fas{
-
-display: flex;
-align-items: center;
-justify-content: center;
-position: absolute;
-//right:2.5rem;
-right:2.62rem;
-
-
-opacity:0;
-cursor: pointer;
-font-size: 1.38em;
-
-
-//background-color:$color-secondary;
-background-clip: text;
--webkit-text-fill-color: $color-secondary;
-
-overflow: hidden;
-
-&:hover{
-opacity: 1;
-
-animation: heart 1000ms linear forwards;
-
-
-}
-
-}
-
-
-
-@keyframes heart{
-    0%{
-        opacity:0;
-        //transform: scale(0);
-        //transform-origin: bottom;
-        
-        
-      
-    }
-    10%{
-        opacity:0;
-        //transform: scale(0);
-        //transform-origin: bottom;
-        
-        
-      
-    }
-    20%{
-        opacity:0.1;
-        //transform: scale(0);
-        //transform-origin: bottom;
-        
-        
-      
-    }
-    30%{
-        opacity:0.2;
-        //transform: scale(0);
-        //transform-origin: bottom;
-        
-        
-      
-    }
-    50%{
-        opacity:0.3;
-        //transform: scale(0.7,0.4);
-        //transform-origin: bottom;
-        
-       
-       
-    }
-
-    60%{
-        opacity:0.4;
-        //transform: scale(0.7,0.4);
-        //transform-origin: bottom;
-        
-       
-       
-    }
-    70%{
-        opacity:0.5;
-        //transform: scale(0.7,0.4);
-        //transform-origin: bottom;
-        
-       
-       
-    }
-    100%{
-        opacity:0.9;
-       // transform: translateY(0%);
-       //transform: scale(1);
+    z-index: 1;
+    font-size: 1.4em;
+    color: transparent;
+    background: linear-gradient($color-secondary 0%, $color-primary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    overflow: hidden;
     
-        
-        
+
+    &::after{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        @include lighter-bg;
+      
+        right: -10%;
+      
+        transition:transform 1500ms linear;
     }
 }
+

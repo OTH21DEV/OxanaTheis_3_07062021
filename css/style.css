@@ -213,61 +213,50 @@ a {
 }
 .heart-icon {
   padding: 10px 20px;
+  font-size: 1.4em;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
 
-.heart-icon .far {
+.heart-icon .empty {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.4em;
+  opacity: 1;
+  transition: opacity 1500ms linear;
+}
+.heart-icon .empty:hover {
+  opacity: 0;
+}
+
+.empty:hover + .full::after {
+  transform: translateY(-100%);
+}
+
+.heart-icon .full {
   position: relative;
   cursor: pointer;
-  font-size: 1.7em;
-}
-
-.heart-icon .fas {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 2.62rem;
-  opacity: 0;
-  cursor: pointer;
-  font-size: 1.38em;
+  z-index: 1;
+  font-size: 1.4em;
+  color: transparent;
+  background: linear-gradient(#FF79DA 0%, #9356DC 100%);
   background-clip: text;
-  -webkit-text-fill-color: #FF79DA;
+  -webkit-background-clip: text;
   overflow: hidden;
 }
-.heart-icon .fas:hover {
-  opacity: 1;
-  animation: heart 1000ms linear forwards;
+.heart-icon .full::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background-color: #f0f0f0;
+  right: -10%;
+  transition: transform 1500ms linear;
 }
 
-@keyframes heart {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.1;
-  }
-  30% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  60% {
-    opacity: 0.4;
-  }
-  70% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0.9;
-  }
-}
 .titles {
   flex-direction: column;
   justify-content: space-between;
