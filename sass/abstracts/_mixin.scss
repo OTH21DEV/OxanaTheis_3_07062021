@@ -58,3 +58,15 @@ background-color: scale-color($color: black,  $lightness: 20%,);
   border-radius: 100%;
   font-size: 1.2em;
 }
+
+//breakpoints 
+
+$breakpoints:(
+    desktop:980px,
+);
+
+@mixin desktop{
+    @media all and (min-width: map-get($breakpoints,desktop)){
+        @content;
+    }
+}

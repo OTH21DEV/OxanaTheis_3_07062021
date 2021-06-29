@@ -123,11 +123,11 @@ animation:loading 4s linear ;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding:30px 40px;
 }
 
 .intro__main-heading {
   margin-top: 0px;
-  padding-top: 30px;
   text-align: center;
   font-size: 1.3em;
   font-weight: bold;
@@ -151,6 +151,10 @@ animation:loading 4s linear ;
   display: flex;
   align-items: center;
   position: relative;
+
+  @include desktop{
+    width:31%;
+  }
 }
 .selection-btn__number{
 
@@ -198,6 +202,20 @@ animation:loading 4s linear ;
   height: auto;
 }
 
+.rest-card-wrapper{
+  @include desktop{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+
+  &>a {
+    @include desktop{
+      width:49%;
+    }
+  }
+}
 .rest-card {
   border-radius: 20px;
   margin-bottom: 20px;
@@ -206,6 +224,8 @@ animation:loading 4s linear ;
 
   @include selection-btn-shadow;
   position: relative;
+
+ 
 }
 
 .rest-card__wrapper-titles-icon {
@@ -226,4 +246,12 @@ animation:loading 4s linear ;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.selection-btn-wrapper{
+  @include desktop{
+    display: flex;
+    justify-content: space-between;
+  }
 }

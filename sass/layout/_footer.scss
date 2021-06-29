@@ -8,6 +8,11 @@ color: white;
 padding: 0 20px 30px 20px;
 @include grey-bg;
 height: auto;
+
+@include desktop{
+    padding-top: 30px;
+  
+}
 }
 
 .footer__logo{
@@ -21,6 +26,11 @@ align-items: center;
     height: 20px;
     filter: invert(100%);
   
+    }
+
+    @include desktop{
+        position: absolute;
+        height: auto;
     }
 }
 
@@ -38,6 +48,13 @@ list-style-type: none;
 padding-left: 0;
 line-height: 1.5;
 margin: 0;
+
+
+@include desktop{
+    display:flex;
+    justify-content: space-evenly;
+    padding-left:10%;
+}
    
 }
 

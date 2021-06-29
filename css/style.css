@@ -59,6 +59,11 @@ input::placeholder {
   background-color: #333333;
   height: auto;
 }
+@media all and (min-width: 980px) {
+  .footer {
+    padding-top: 30px;
+  }
+}
 
 .footer__logo {
   height: 60px;
@@ -68,6 +73,12 @@ input::placeholder {
 .footer__logo img {
   height: 20px;
   filter: invert(100%);
+}
+@media all and (min-width: 980px) {
+  .footer__logo {
+    position: absolute;
+    height: auto;
+  }
 }
 
 a {
@@ -80,6 +91,13 @@ a {
   padding-left: 0;
   line-height: 1.5;
   margin: 0;
+}
+@media all and (min-width: 980px) {
+  .footer__nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10%;
+  }
 }
 
 .footer__nav__link {
@@ -95,7 +113,7 @@ a {
 .btn-wrapper {
   display: flex;
   justify-content: center;
-  padding: 30px 0 50px 0;
+  padding: 30px 0 30px 0;
 }
 .btn-wrapper.btn-wrapper--order {
   padding: 20px 0 0 0;
@@ -439,11 +457,11 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 30px 40px;
 }
 
 .intro__main-heading {
   margin-top: 0px;
-  padding-top: 30px;
   text-align: center;
   font-size: 1.3em;
   font-weight: bold;
@@ -468,6 +486,11 @@ a {
   display: flex;
   align-items: center;
   position: relative;
+}
+@media all and (min-width: 980px) {
+  .selection-btn {
+    width: 31%;
+  }
 }
 
 .selection-btn__number {
@@ -508,6 +531,19 @@ a {
   height: auto;
 }
 
+@media all and (min-width: 980px) {
+  .rest-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media all and (min-width: 980px) {
+  .rest-card-wrapper > a {
+    width: 49%;
+  }
+}
+
 .rest-card {
   border-radius: 20px;
   margin-bottom: 20px;
@@ -534,6 +570,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media all and (min-width: 980px) {
+  .selection-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 main {
@@ -609,6 +652,19 @@ main {
   opacity: 0;
   transform: rotate(0deg);
   transition: all 250ms linear;
+}
+
+@media all and (min-width: 980px) {
+  .menu-content-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media all and (min-width: 980px) {
+  .menu-content {
+    width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
