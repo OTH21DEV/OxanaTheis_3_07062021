@@ -9,7 +9,7 @@ padding: 0 20px 30px 20px;
 @include grey-bg;
 height: auto;
 
-@include desktop{
+@include tablette{
     padding-top: 30px;
   
 }
@@ -28,7 +28,7 @@ align-items: center;
   
     }
 
-    @include desktop{
+    @include tablette{
         position: absolute;
         height: auto;
     }
@@ -50,10 +50,10 @@ line-height: 1.5;
 margin: 0;
 
 
-@include desktop{
+@include tablette{
     display:flex;
     justify-content: space-evenly;
-    padding-left:10%;
+    padding-left:110px;
 }
    
 }

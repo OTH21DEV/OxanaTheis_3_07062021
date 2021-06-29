@@ -63,10 +63,16 @@ background-color: scale-color($color: black,  $lightness: 20%,);
 
 $breakpoints:(
     desktop:980px,
+    tablette:768px,
 );
 
 @mixin desktop{
     @media all and (min-width: map-get($breakpoints,desktop)){
+        @content;
+    }
+}
+@mixin tablette{
+    @media all and (min-width: map-get($breakpoints,tablette)){
         @content;
     }
 }

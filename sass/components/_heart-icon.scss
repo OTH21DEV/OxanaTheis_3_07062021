@@ -40,6 +40,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 
     &::after{
@@ -49,8 +52,6 @@
         width: 150%;
         height: 150%;
         @include lighter-bg;
-      
-        right: -10%;
       
         transition:transform 1500ms linear;
     }
