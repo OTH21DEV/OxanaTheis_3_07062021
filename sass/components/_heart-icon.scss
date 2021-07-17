@@ -26,7 +26,7 @@
         opacity:0;
     }
 }
-.empty:hover + .full::after{
+.empty:hover + .full::after {
     transform: translateY(-100%);
 }
 
@@ -51,9 +51,9 @@
         position: absolute;
         width: 150%;
         height: 150%;
-        @include lighter-bg;
+       @include lighter-bg;
       
         transition:transform 1500ms linear;
     }
-}
 
+}
