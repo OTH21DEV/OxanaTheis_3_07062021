@@ -161,11 +161,10 @@
 
 .selection-btn__text {
   width: 80%;
+  text-align: left;
+  font-size: 1.2em;
 
-  & p {
-    text-align: left;
-    font-size: 1.2em;
-  }
+
 }
 .rest {
   padding: 40px 20px 30px 20px;

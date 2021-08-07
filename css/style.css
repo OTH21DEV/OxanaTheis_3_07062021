@@ -235,6 +235,7 @@ a {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .heart-icon .empty {
@@ -253,7 +254,12 @@ a {
   transform: translateY(-100%);
 }
 
-.heart-icon .full {
+.empty:hover + .full--white::after {
+  transform: translateY(-100%);
+}
+
+.heart-icon .full,
+.heart-icon .full--white {
   position: relative;
   cursor: pointer;
   z-index: 1;
@@ -267,14 +273,23 @@ a {
   justify-content: center;
   align-items: center;
 }
-.heart-icon .full::after {
+
+.full::after,
+.full--white::after {
   content: "";
   z-index: -1;
   position: absolute;
   width: 150%;
   height: 150%;
-  background-color: #f0f0f0;
   transition: transform 1500ms linear;
+}
+
+.full::after {
+  background-color: #f0f0f0;
+}
+
+.full--white::after {
+  background: white;
 }
 
 .titles {
@@ -500,8 +515,6 @@ a {
 
 .selection-btn__text {
   width: 80%;
-}
-.selection-btn__text p {
   text-align: left;
   font-size: 1.2em;
 }
